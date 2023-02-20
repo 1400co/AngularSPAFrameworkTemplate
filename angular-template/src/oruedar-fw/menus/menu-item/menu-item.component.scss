@@ -13,6 +13,79 @@
     width: 100%;
 }
 
+.menu-custom {
+    display: inline-block;
+    position: relative; // Child pop-up menu items need to be positioned relative to this menu item.
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    font-size: 15px;
+    line-height: 15px;
+    color: #666;
+    cursor: pointer;
+    box-sizing: border-box; // works well with margins and padding.
+    width: 100%;
+}
+
+/* small only */
+@media screen and (min-width: 0em) and (max-width: 40em) {
+    .menu-custom {
+        display: block; // puts each item on it's own line
+        margin-left: 0;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        color: white;
+        width: 100%;
+    }
+    .router-link-active {
+        background-color: green;
+    }
+    
+  }
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .menu-custom {
+        display: inline-block;
+        position: relative; // Child pop-up menu items need to be positioned relative to this menu item.
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 15px;
+        color: #666;
+        cursor: pointer;
+        box-sizing: border-box; // works well with margins and padding.
+        width: 100%;
+    }
+    .router-link-active {
+        background-color: #dfd;
+    }
+  }
+  
+  /* Large and up */
+  @media screen and (min-width: 64em) {
+    .menu-custom {
+        display: inline-block;
+        position: relative; // Child pop-up menu items need to be positioned relative to this menu item.
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        font-size: 15px;
+        line-height: 15px;
+        color: #666;
+        cursor: pointer;
+        box-sizing: border-box; // works well with margins and padding.
+        width: 100%;
+    }
+    .router-link-active {
+        background-color: #dfd;
+    }
+  }
+
 /* If host does not contain the class "parent-is-popup", add the margin-left and auto width - activates part of our inline-block display */
 :host:not(.parent-is-popup) {
     // margin-left: 16px;
@@ -68,10 +141,10 @@ span {
     background-color: green;
 }
 
-.router-link-active {
-    background-color: #dfd;
-}
+// .router-link-active {
+//     background-color: #dfd;
+// }
 
-.router-link-active.vertical-menu {
-    background-color: green;
-}
+// .router-link-active.vertical-menu {
+//     background-color: green;
+// }

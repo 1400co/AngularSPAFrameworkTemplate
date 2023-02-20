@@ -67,7 +67,7 @@ export let initialMenuItems: Array<MenuItem> = [
   },
   {
     text: 'Maintenance',
-    icon: 'fa-wrench',
+    icon: 'faGear',
     // route: null,
     route: '/settings',
     submenu: [

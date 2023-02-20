@@ -1,7 +1,17 @@
-<div class="menu-item"
+ <!-- <div class="menu-item"
 [routerLink]="item.route"
 routerLinkActive="router-link-active"
-[ngClass]="{'vertical-menu':menuService.isVertical}">
+[ngClass]="{'vertical-menu':menuService.isVertical}"
+(click)="menuService.showingLeftsideMenu=false">
+    <span>
+        <fw-custom-icons [iconName]="item.icon"></fw-custom-icons>
+    </span>
+    <span>{{ item.text.toUpperCase()}} </span>
+</div>   -->
+ <div class="menu-custom menu-item"
+[routerLink]="item.route"
+routerLinkActive="router-link-active"
+(click)="menuService.showingLeftsideMenu=false">
     <span>
         <fw-custom-icons [iconName]="item.icon"></fw-custom-icons>
     </span>

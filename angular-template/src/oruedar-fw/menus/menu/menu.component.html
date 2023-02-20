@@ -1,9 +1,10 @@
 <nav>
-    <ul>
-        <li *ngFor="let item of menuService.items" >
+    <ul class="menu-custom">
+         <li *ngFor="let item of menuService.items" >
+            <!--<fw-menu-item [item]="item" class="menu-custom"/> -->
              <fw-menu-item [item]="item"
-             [ngClass]="{'vertical-menu':menuService.isVertical}"
-             />
+             [ngClass]="{'vertical-menu':menuService.isVertical}"/> 
+             
         </li>
     </ul>
 </nav>

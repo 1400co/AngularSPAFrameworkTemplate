@@ -22,8 +22,11 @@ ngOnInit(): void {
       case "faBars":
           this.iconValue = fasolid.faBars;
           break;
-          case "faEllipsisVertical":
+      case "faEllipsisVertical":
             this.iconValue = fasolid.faEllipsisVertical;
+            break;
+      case "faGear":
+            this.iconValue = fasolid.faGear;
             break;
       default:
         this.iconValue = fasolid.fa0;
