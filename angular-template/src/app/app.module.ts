@@ -5,17 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { OruedarFwModule } from 'src/oruedar-fw/oruedar-fw.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CountriesComponent } from './countries/countries.component';
+import { SettingsComponent } from './settings/settings.component';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app-routing';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DashboardComponent,
+    CountriesComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    OruedarFwModule
+    OruedarFwModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,4 @@
+enum fwIcons {
+    faBars,
+    faGauge
+  }

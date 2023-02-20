@@ -13,12 +13,14 @@ import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CustomIconsComponent } from './custom-icons/custom-icons.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
   imports: [
     CommonModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ],
   declarations: [
   FrameworkBodyComponent,

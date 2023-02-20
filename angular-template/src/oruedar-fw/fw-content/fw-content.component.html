@@ -1,1 +1,10 @@
-<p>fw-content works!</p>
+<!-- vertical menu -->
+
+<fw-menu  *ngIf="menuService.isVertical || menuService.showingLeftsideMenu"
+    class="vertical-menu"/>
+
+
+
+<div class="body-style">    
+    <router-outlet></router-outlet>
+</div>

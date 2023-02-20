@@ -27,7 +27,6 @@ export class ScreenBelowLargeDirective implements OnDestroy {
     set screenBelowLarge(condition: boolean) {
         // Ignore the passed condition (borrowed from ngIf source code) and set it based on screen size
         // Set condition to true (allowing tag to be displayed in template) only if the current screen is NOT 'large'.
-        console.log("directiva screenBelowLarge")
         condition = this.screenService.screenWidth < this.screenService.largeBreakPoint; // This is the only line of code that differs from scree-large.directive.
 
         if (condition && !this.hasView) {

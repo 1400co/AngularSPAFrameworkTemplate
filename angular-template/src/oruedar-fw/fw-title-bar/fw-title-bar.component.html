@@ -1,15 +1,20 @@
 <div *ifViewportSize="'small'" class="title-bar">
-    <fw-custom-icons [iconName]="'faBars'"></fw-custom-icons>
+    <span (click)="menuService.toggleLeftsideMenu()">
+        <fw-custom-icons [iconName]="'faBars'" />
+    </span>
     <div class="small-image-holder">
         <img class="small-image" src="assets/images/logo.png"  alt="Company Logo">
     </div>
-    <span class="glyphicon glyphicon-option-vertical">...</span>
+    <!-- <span class="glyphicon glyphicon-option-vertical"></span> -->
+    <span>
+        <fw-custom-icons [iconName]="'faEllipsisVertical'" />
+    </span>
 </div>
 <div *ifViewportSize="'large'" class="title-bar">
     <img src="assets/images/logo.png"  alt="Company Logo">
     <div class="menu-area">
         <fw-top-bar>
         </fw-top-bar>
-        <fw-menu></fw-menu>
+        <fw-menu *ngIf="!menuService.isVertical"></fw-menu>
     </div>
 </div>

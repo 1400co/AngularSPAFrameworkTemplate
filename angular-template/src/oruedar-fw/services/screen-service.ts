@@ -57,6 +57,5 @@ export class ScreenService {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
     this.resizeSource.next(null); // Notifies any subscribers to the public 'resize$' observable that the screen has been resized, triggering their onNext() handler so they can act accordingly.
-    // console.log($event);
   }
 }
