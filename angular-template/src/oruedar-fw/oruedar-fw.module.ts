@@ -7,23 +7,34 @@ import { FrameworkConfigService } from './services/framework-config.service';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { StatusBarComponent } from './status-bar/status-bar.component';
 import { ScreenService } from './services/screen-service';
-
+import { IfViewportSizeDirective } from './directives/if-viewport-size.directive';
+import { MenuService } from './services/menu-service';
+import { MenuComponent } from './menus/menu/menu.component';
+import { MenuItemComponent } from './menus/menu-item/menu-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CustomIconsComponent } from './custom-icons/custom-icons.component';
 
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   declarations: [
   FrameworkBodyComponent,
   FwContentComponent,
   FwTitleBarComponent,
   TopBarComponent,
-  StatusBarComponent
+  StatusBarComponent, 
+  IfViewportSizeDirective,
+  MenuComponent,
+  MenuItemComponent,
+  CustomIconsComponent
 ],
   providers:[
     FrameworkConfigService,
-    ScreenService
+    ScreenService,
+    MenuService
   ],
   exports:[FrameworkBodyComponent]
 })

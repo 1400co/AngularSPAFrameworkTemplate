@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
  * @export
  * @class ScreenService
  */
+// Deprecated
 @Injectable()
 export class ScreenService {
   private resizeSource = new Subject<null>(); // Subject is an Observable that can fire off it's own next() events to its subscribers.  We keep Subjects private while making their Observable behavior public with a public var set to the Subject.asObservable() method.
@@ -42,7 +43,6 @@ export class ScreenService {
    * @memberof ScreenService
    */
   isLarge(): boolean {
-    console.log("isLarge",this.screenWidth >= this.largeBreakPoint);
     return this.screenWidth >= this.largeBreakPoint;
   }
 

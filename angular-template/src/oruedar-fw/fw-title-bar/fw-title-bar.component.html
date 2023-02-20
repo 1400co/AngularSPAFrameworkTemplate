@@ -1,16 +1,15 @@
-<div *ngIf="!screenService.isLarge()" class="title-bar">
-    <span class="glyphicon glyphicon-menu-hamburger">...</span>
+<div *ifViewportSize="'small'" class="title-bar">
+    <fw-custom-icons [iconName]="'faBars'"></fw-custom-icons>
     <div class="small-image-holder">
         <img class="small-image" src="assets/images/logo.png"  alt="Company Logo">
     </div>
     <span class="glyphicon glyphicon-option-vertical">...</span>
 </div>
-<div *ngIf="screenService.isLarge()" class="title-bar">
+<div *ifViewportSize="'large'" class="title-bar">
     <img src="assets/images/logo.png"  alt="Company Logo">
     <div class="menu-area">
         <fw-top-bar>
         </fw-top-bar>
-        <!-- menu -->
-        
+        <fw-menu></fw-menu>
     </div>
 </div>
