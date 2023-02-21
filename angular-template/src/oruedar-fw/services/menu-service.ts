@@ -22,4 +22,9 @@ export class MenuService{
     this.isVertical = true;
     this.showingLeftsideMenu = !this.showingLeftsideMenu;
    }
+
+   toggleMenuOrientation(){
+    this.isVertical =!this.isVertical
+    
+   }
 }

@@ -1,8 +1,8 @@
 <!-- vertical menu -->
-
-<fw-menu  *ngIf="menuService.isVertical && menuService.showingLeftsideMenu"
-    class="vertical-menu"/>
-
+<div *ifViewportSize="'large'">
+    <fw-menu  *ngIf="menuService.isVertical || menuService.showingLeftsideMenu"
+        class="vertical-menu"/>
+</div>
 
 
 <div class="body-style">    

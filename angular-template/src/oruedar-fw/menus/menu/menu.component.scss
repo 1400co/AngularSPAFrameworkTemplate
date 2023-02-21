@@ -5,60 +5,68 @@
          flex-grow: 1; // menu grows with size of the screen
  }
 
-.menu-custom {
-    display: flex;
-    align-items: flex-end; // right side of the flex box
-    justify-content: flex-end; // bottom of the flex box
-    flex-grow: 1; // menu grows with size of the screen
-    .li{
-        width:100%
-    }
-}
+// .menu-custom {
+//     display: flex;
+//     align-items: flex-end; // right side of the flex box
+//     justify-content: flex-end; // bottom of the flex box
+//     flex-grow: 1; // menu grows with size of the screen
+//     .li{
+//         width:100%
+//     }
+// }
 
-/* add/override :host properties when this element has the .vertical-menu class */
- :host(.vertical-menu) {
-     display: inline-block;
-     width: 200px;
-     padding-left: 4px;
-     flex-grow: 0; // this menu has a static width, so we don't want it to grow
-     background-color: #555;
-     overflow: auto; // allows vertically scrollable long menu
- }
-
-/* small only */
-@media screen and (min-width: 0em) and (max-width: 40em) {
-    .menu-custom {
-        display: inline-block;
-        width: 200px;
-        padding-left: 4px;
-        flex-grow: 0; // this menu has a static width, so we don't want it to grow
-        background-color: #555;
-        overflow: auto; // allows vertically scrollable long menu
-    }
-    
+// /* add/override :host properties when this element has the .vertical-menu class */
+:host(.vertical-menu) {
+      display: inline-block;
+      width: 200px;
+      padding-left: 4px;
+      flex-grow: 0; // this menu has a static width, so we don't want it to grow
+      background-color: #555;
+      overflow: auto; // allows vertically scrollable long menu
   }
 
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {
-    .menu-custom {
-        display: flex;
-        align-items: flex-end; // right side of the flex box
-        justify-content: flex-end; // bottom of the flex box
-        flex-grow: 1; // menu grows with size of the screen
+// /* small only */
+// @media screen and (min-width: 0em) and (max-width: 40em) {
+//     .menu-custom {
+//         display: inline-block;
+//         width: 200px;
+//         padding-left: 4px;
+//         flex-grow: 0; // this menu has a static width, so we don't want it to grow
+//         background-color: #555;
+//         overflow: auto; // allows vertically scrollable long menu
+//     }
+//     .button {
+//         margin-left: 20px;
+//         margin-bottom: 2px;
+//     }
+//   }
+
+// /* Medium only */
+// @media screen and (min-width: 40em) and (max-width: 63.9375em) {
+//     .menu-custom {
+//         display: flex;
+//         align-items: flex-end; // right side of the flex box
+//         justify-content: flex-end; // bottom of the flex box
+//         flex-grow: 1; // menu grows with size of the screen
         
-    }
-    
-  }
+//     }
+//     .button {
+//         margin-top: 20px;
+//     }
+//   }
   
-  /* Large and up */
-  @media screen and (min-width: 64em) {
-    .menu-custom {
-        display: flex;
-        align-items: flex-end; // right side of the flex box
-        justify-content: flex-end; // bottom of the flex box
-        flex-grow: 1; // menu grows with size of the screen
-    }
-  }
+//   /* Large and up */
+//   @media screen and (min-width: 64em) {
+//     .menu-custom {
+//         display: flex;
+//         align-items: flex-end; // right side of the flex box
+//         justify-content: flex-end; // bottom of the flex box
+//         flex-grow: 1; // menu grows with size of the screen
+//     }
+//     .button {
+//         margin-top: 20px;
+//     }
+//   }
 
 ul {
     list-style-type: none; // no bullet points
@@ -70,11 +78,11 @@ li {
     display: inline; // displayed in horizontal row
 }
 
-button {
-    margin-top: 20px;
-}
-button.horizontal {
-    margin-left: 20px;
-    margin-bottom: 2px;
-}
+ button {
+     margin-top: 20px;
+ }
+ button.horizontal {
+     margin-left: 20px;
+     margin-bottom: 2px;
+ }
 

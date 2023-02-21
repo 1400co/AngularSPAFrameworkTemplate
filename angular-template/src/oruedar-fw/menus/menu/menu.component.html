@@ -1,10 +1,17 @@
 <nav>
-    <ul class="menu-custom">
+    <ul>
          <li *ngFor="let item of menuService.items" >
-            <!--<fw-menu-item [item]="item" class="menu-custom"/> -->
+            <!-- <fw-menu-item [item]="item" class="menu-custom"/> -->
              <fw-menu-item [item]="item"
-             [ngClass]="{'vertical-menu':menuService.isVertical}"/> 
+             [ngClass]="{'vertical-menu':menuService.isVertical}"/>
              
         </li>
     </ul>
 </nav>
+<button 
+    class="btn btn-sm button"
+    ngClass="{'horizontal':!menuService.isVertical}"
+    (click)="menuService.toggleMenuOrientation()">
+    <fw-custom-icons *ngIf="menuService.isVertical" [iconName]="'faAngleUp'"></fw-custom-icons>
+    <fw-custom-icons *ngIf="!menuService.isVertical" [iconName]="'faAngleLeft'"></fw-custom-icons>
+</button>
