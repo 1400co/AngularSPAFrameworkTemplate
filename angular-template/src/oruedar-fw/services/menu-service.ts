@@ -19,12 +19,12 @@ export class MenuService{
    showingLeftsideMenu: boolean = false;
 
    toggleLeftsideMenu(): void {
-    this.isVertical = true;
+    this.isVertical =true
     this.showingLeftsideMenu = !this.showingLeftsideMenu;
+    console.log("click",this.isVertical,this.showingLeftsideMenu  )
    }
 
    toggleMenuOrientation(){
     this.isVertical =!this.isVertical
-    
    }
 }
