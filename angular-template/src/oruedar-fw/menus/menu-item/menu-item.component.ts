@@ -1,4 +1,6 @@
 
+import { ElementRef } from '@angular/core';
+import { Renderer2 } from '@angular/core';
 import { Component, HostBinding, Input, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem, MenuService } from 'src/oruedar-fw/services/menu-service';
@@ -20,7 +22,7 @@ export class MenuItemComponent {
   
   @HostBinding('class.parent-is-popup')
   @Input() parentIspopup = true;
-  isActiveroute = false;
+  isActiveRoute = false;
 
   mouseInItem=false;
   mouseInPopup=false;
@@ -28,19 +30,19 @@ export class MenuItemComponent {
   popupTop= 34;
   
   constructor(public menuService: MenuService,
-    public router:Router){
+    public router:Router,
+    public el:ElementRef,
+    public renderer: Renderer2 ){
 
   }
   
   onPopupMouseEnter(event:any){
-    console.log("mouse enter")
     if(!this.menuService.isVertical){
       this.mouseInPopup = true;
     }
   }
 
   onPopupMouseLeave(event:any){
-    console.log("mouse leave")
     if(!this.menuService.isVertical){
       this.mouseInPopup = false;
     }
@@ -73,6 +75,31 @@ export class MenuItemComponent {
     }
   }
 
-
+  @HostListener('click', ['$event'])
+  onClick(event) : void {
+    event.stopPropagation();
+    if(this.item.submenu)
+    {
+      if(!this.menuService.isVertical){
+        this.mouseInPopup = !this.mouseInPopup;
+      }
+    }else if (this.item.route){
+        console.log("me cierro");
+        console.log(this.parentIspopup);
+        if(this.parentIspopup)
+        {
+          //force horizontal menus to close by sending a mouse event.
+          let newEvent = new MouseEvent('mouseleave', {bubbles:true});
+          // this.renderer.invokeElementMethod(this.el.nativeElement, 'dispatchEvent', [newEvent]);
+          const element = this.renderer.selectRootElement(this.el.nativeElement);
+          element.dispatchEvent(newEvent);
+        }
+        
+        this.router.navigate(['/' + this.item.route]);
+    }
+    
+    
+    
+  }
 
 }

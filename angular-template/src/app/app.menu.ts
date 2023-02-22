@@ -17,8 +17,8 @@ export let initialMenuItems: Array<MenuItem> = [
   {
     text: 'Countries',
     icon: 'faCaretDown',
-    // route: null,
-    route: '/countries',
+    route: null,
+    //route: '/countries',
     submenu: [
       {
         text: 'Select',
@@ -74,8 +74,8 @@ export let initialMenuItems: Array<MenuItem> = [
   {
     text: 'Maintenance',
     icon: 'faCaretDown',
-    // route: null,
-    route: '/settings',
+    route: null,
+    //route: '/settings',
     submenu: [
       {
         text: 'Country List',
