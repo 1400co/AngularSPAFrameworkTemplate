@@ -34,6 +34,12 @@ ngOnInit(): void {
       case "faAngleUp":
               this.iconValue = fasolid.faAngleUp;
               break;
+      case "faCaretDown":
+                this.iconValue = fasolid.faCaretDown;
+                break;
+      case "faFlag":
+                  this.iconValue = fasolid.faFlag;
+                  break;                
       default:
         this.iconValue = fasolid.fa0;
           break;

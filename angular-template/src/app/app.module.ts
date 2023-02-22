@@ -10,6 +10,8 @@ import { CountriesComponent } from './countries/countries.component';
 import { SettingsComponent } from './settings/settings.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routing';
+import { CountryDetailComponent } from './country-detail/country-detail.component';
+import { CountryMaintComponent } from './country-maint/country-maint.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { appRoutes } from './app-routing';
     AppComponent,
     DashboardComponent,
     CountriesComponent,
-    SettingsComponent
+    SettingsComponent,
+    CountryDetailComponent,
+    CountryMaintComponent
   ],
   imports: [
     BrowserModule,

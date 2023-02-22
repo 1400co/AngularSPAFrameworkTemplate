@@ -3,6 +3,7 @@
          <li *ngFor="let item of menuService.items" >
             <!-- <fw-menu-item [item]="item" class="menu-custom"/> -->
              <fw-menu-item [item]="item"
+             [parentIspopup]="false"
              [ngClass]="{'vertical-menu':menuService.isVertical}"/>
              
         </li>

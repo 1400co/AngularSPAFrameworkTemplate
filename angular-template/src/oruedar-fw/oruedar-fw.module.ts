@@ -14,6 +14,7 @@ import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CustomIconsComponent } from './custom-icons/custom-icons.component';
 import { RouterModule } from '@angular/router';
+import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { RouterModule } from '@angular/router';
   IfViewportSizeDirective,
   MenuComponent,
   MenuItemComponent,
-  CustomIconsComponent
+  CustomIconsComponent,
+  PopupMenuComponent
 ],
   providers:[
     FrameworkConfigService,
